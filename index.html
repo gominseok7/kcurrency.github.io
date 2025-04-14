@@ -142,6 +142,16 @@
       }
     });
   });
+  // 추가: 협회 소개 하위 탭 전환 기능
+  function showIntroTab(tab) {
+    const tabs = ['about', 'message', 'location'];
+    tabs.forEach(id => {
+      const el = document.getElementById('intro-' + id);
+      if (el) {
+        el.style.display = id === tab ? 'block' : 'none';
+      }
+    });
+  }
 </script>
 
 <div id="business" style="display:none; background-color: #eef7f1; padding: 30px 20px; border-radius: 8px; max-width: 800px; margin: auto;">
