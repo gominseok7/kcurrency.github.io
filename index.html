@@ -127,12 +127,21 @@
 </div>
 
 <script>
-  const introTabs = ['about', 'message', 'location'];
-  function showIntroTab(tab) {
-    introTabs.forEach(id => {
-      document.getElementById('intro-' + id).style.display = id === tab ? 'block' : 'none';
+  const sections = ['notice', 'intro', 'business', 'role', 'membership', 'grading', 'donation', 'contact'];
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', e => {
+      const targetId = link.getAttribute('href').replace('#', '');
+      if (sections.includes(targetId)) {
+        e.preventDefault();
+        sections.forEach(id => {
+          const section = document.getElementById(id);
+          if (section) {
+            section.style.display = id === targetId ? 'block' : 'none';
+          }
+        });
+      }
     });
-  }
+  });
 </script>
 
 <div id="business" style="display:none; background-color: #eef7f1; padding: 30px 20px; border-radius: 8px; max-width: 800px; margin: auto;">
