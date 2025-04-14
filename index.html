@@ -154,32 +154,13 @@
             section.style.display = id === targetId ? 'block' : 'none';
           }
         });
+        if (targetId === 'intro') {
+          showIntroTab('about');
+        }
       }
     });
   });
-  // 추가: 협회 소개 하위 탭 전환 기능
-  function showIntroTab(tab) {
-    document.getElementById('intro').style.display = 'block';
-    const tabs = ['about', 'message', 'location'];
-    tabs.forEach(id => {
-      const el = document.getElementById('intro-' + id);
-      if (el) {
-        el.style.display = id === tab ? 'block' : 'none';
-      }
-    });
-  }
-    });
-  }
-  // 추가: 협회 소개 하위 탭 전환 기능 복구
-  function showIntroTab(tab) {
-    const tabs = ['about', 'message', 'location'];
-    tabs.forEach(id => {
-      const el = document.getElementById('intro-' + id);
-      if (el) {
-        el.style.display = id === tab ? 'block' : 'none';
-      }
-    });
-  }
+
   function showIntroTab(tab) {
     document.getElementById('intro').style.display = 'block';
     const tabs = ['about', 'message', 'location'];
