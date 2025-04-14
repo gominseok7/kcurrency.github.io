@@ -64,6 +64,21 @@
       font-size: 1rem;
       border-bottom: 1px solid #e0d8c2;
     }
+      @media screen and (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      header h1 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+      nav a {
+        display: block;
+        margin: 5px 0;
+        font-size: 1.1rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -143,6 +158,16 @@
     });
   });
   // 추가: 협회 소개 하위 탭 전환 기능
+  function showIntroTab(tab) {
+    const tabs = ['about', 'message', 'location'];
+    tabs.forEach(id => {
+      const el = document.getElementById('intro-' + id);
+      if (el) {
+        el.style.display = id === tab ? 'block' : 'none';
+      }
+    });
+  }
+  // 추가: 협회 소개 하위 탭 전환 기능 복구
   function showIntroTab(tab) {
     const tabs = ['about', 'message', 'location'];
     tabs.forEach(id => {
