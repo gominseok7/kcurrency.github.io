@@ -171,13 +171,30 @@
       }
     });
   }
+  function showBusinessTab(tab) {
+    const tabs = ['role', 'membership', 'grading'];
+    tabs.forEach(id => {
+      const section = document.getElementById(id);
+      if (section) {
+        section.style.display = id === tab ? 'block' : 'none';
+      }
+    });
+    document.getElementById('business').style.display = 'block';
+  }
 </script>
 
 <div id="business" style="display:none; background-color: #eef7f1; padding: 30px 20px; border-radius: 8px; max-width: 800px; margin: auto;">
   <h2 style="color: #2e4e3f;">협회 사업</h2>
-  <p>대한화폐사연합회는 경매를 중심으로 활동하는 전문 경매인들을 육성하고 연결하는 사업을 운영하고 있습니다. 단순한 개인 판매를 넘어, 회원 간의 네트워크를 구축하고 신뢰 기반의 거래 구조를 시스템화함으로써 화폐 수집 시장의 신뢰 회복을 주도하고 있습니다.</p>
-  <p>협회는 매주 정기적인 온라인 경매 방송을 통해 투명하고 공정한 입찰 문화를 조성하고 있으며, 경매 진행자들의 교육, 감정 능력 향상 프로그램, 실시간 정산 시스템을 통해 시장 혼탁 요소를 줄이고 있습니다.</p>
-  <p>나아가, 중장기적으로는 오프라인 전시회, 세미나 개최 및 정기 간행물 발간 등을 통해 화폐 수집 문화의 가치를 널리 알리고, 후속 세대 수집가들을 위한 기반을 만들어갈 예정입니다.</p>
+  <ul style="list-style: none; padding-left: 0; display: flex; gap: 15px; margin-bottom: 20px;">
+    <li><a href="#role" onclick="showBusinessTab('role')" style="text-decoration: underline; color: #2e4e3f;">협회의 역할</a></li>
+    <li><a href="#membership" onclick="showBusinessTab('membership')" style="text-decoration: underline; color: #2e4e3f;">회원 운영 안내</a></li>
+    <li><a href="#grading" onclick="showBusinessTab('grading')" style="text-decoration: underline; color: #2e4e3f;">감정 기준 안내</a></li>
+  </ul>
+  <div id="business-role">
+    <p>대한화폐사연합회는 경매를 중심으로 활동하는 전문 경매인들을 육성하고 연결하는 사업을 운영하고 있습니다. 단순한 개인 판매를 넘어, 회원 간의 네트워크를 구축하고 신뢰 기반의 거래 구조를 시스템화함으로써 화폐 수집 시장의 신뢰 회복을 주도하고 있습니다.</p>
+    <p>협회는 매주 정기적인 온라인 경매 방송을 통해 투명하고 공정한 입찰 문화를 조성하고 있으며, 경매 진행자들의 교육, 감정 능력 향상 프로그램, 실시간 정산 시스템을 통해 시장 혼탁 요소를 줄이고 있습니다.</p>
+    <p>나아가, 중장기적으로는 오프라인 전시회, 세미나 개최 및 정기 간행물 발간 등을 통해 화폐 수집 문화의 가치를 널리 알리고, 후속 세대 수집가들을 위한 기반을 만들어갈 예정입니다.</p>
+  </div>
 </div>
 
 <!-- 협회의 역할 섹션 추가 -->
