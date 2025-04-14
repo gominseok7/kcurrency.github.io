@@ -142,6 +142,32 @@
   <p>나아가, 중장기적으로는 오프라인 전시회, 세미나 개최 및 정기 간행물 발간 등을 통해 화폐 수집 문화의 가치를 널리 알리고, 후속 세대 수집가들을 위한 기반을 만들어갈 예정입니다.</p>
 </div>
 
+<!-- 협회의 역할 섹션 추가 -->
+<div id="role" style="display:none; background-color: #f1f1f9; padding: 30px 20px; border-radius: 8px; max-width: 800px; margin: auto;">
+  <h2 style="color: #3b3b6d;">협회의 역할</h2>
+  <p>대한화폐사연합회는 감정 신뢰 시스템 확립과 수집문화의 공공성과 책임성 강화에 중점을 둔 비영리 단체입니다.</p>
+  <p>화폐 감정 표준 제시, 가짜 유통 경로 신고 접수, 실명제 거래 캠페인 등 공익을 위한 활동을 수행합니다.</p>
+  <p>또한 기부금 기반의 소외계층 지원, 보호소 연계 활동 등 수집가들의 나눔 참여를 이끌어내며, 단순한 거래를 넘어선 공동체적 가치를 추구합니다.</p>
+</div>
+
+<!-- 회원 운영 안내 섹션 추가 -->
+<div id="membership" style="display:none; background-color: #fdf9ef; padding: 30px 20px; border-radius: 8px; max-width: 800px; margin: auto;">
+  <h2 style="color: #6d4c1f;">회원 운영 안내</h2>
+  <ul>
+    <li>입회비 및 연회비 없음</li>
+    <li>정기 감정 교육 참여 가능</li>
+    <li>회원 경매·기부 연계 활동 참여 가능</li>
+    <li>정산/투명 공시 시스템 기반 운영</li>
+  </ul>
+</div>
+
+<!-- 감정 기준 안내 섹션 추가 -->
+<div id="grading" style="display:none; background-color: #f3fbf4; padding: 30px 20px; border-radius: 8px; max-width: 800px; margin: auto;">
+  <h2 style="color: #2c5e3a;">감정 기준 안내</h2>
+  <p>대한화폐사연합회는 보존 상태, 유통 이력, 위조 여부, 시장 유동성 등을 기준으로 화폐 감정 평가를 수행합니다.</p>
+  <p>감정은 협회 소속 전문가 또는 인증된 외부 감정사의 확인을 기반으로 이루어지며, 결과에 따라 거래 및 기부 여부가 결정됩니다.</p>
+</div>
+
 <div id="donation" style="display:none; background-color: #fef4ea; padding: 30px 20px; border-radius: 8px; max-width: 800px; margin: auto;">
   <h2 style="color: #a3561b;">기부 사업</h2>
   <p>대한화폐사연합회는 단순한 수익 중심이 아닌, 사회적 책임을 다하는 수집문화를 실현하고자 기부 사업을 함께 운영하고 있습니다.</p>
@@ -162,7 +188,7 @@
 </div>
 
 <script>
-  const sections = ['intro', 'business', 'donation', 'contact'];
+  const sections = [$1, 'role', 'membership', 'grading'];
   document.querySelectorAll('nav a').forEach(link => {
     link.addEventListener('click', e => {
       const targetId = link.getAttribute('href').replace('#', '');
