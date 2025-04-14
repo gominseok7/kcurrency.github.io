@@ -142,7 +142,7 @@
 </div>
 
 <script>
-  const sections = ['notice', 'intro', 'business', 'role', 'membership', 'grading', 'donation', 'contact', 'intro-about', 'intro-message', 'intro-location'];
+  const sections = ['notice', 'intro', 'business', 'role', 'membership', 'grading', 'donation', 'contact'];
   document.querySelectorAll('nav a').forEach(link => {
     link.addEventListener('click', e => {
       const targetId = link.getAttribute('href').replace('#', '');
@@ -172,6 +172,16 @@
   }
   // 추가: 협회 소개 하위 탭 전환 기능 복구
   function showIntroTab(tab) {
+    const tabs = ['about', 'message', 'location'];
+    tabs.forEach(id => {
+      const el = document.getElementById('intro-' + id);
+      if (el) {
+        el.style.display = id === tab ? 'block' : 'none';
+      }
+    });
+  }
+  function showIntroTab(tab) {
+    document.getElementById('intro').style.display = 'block';
     const tabs = ['about', 'message', 'location'];
     tabs.forEach(id => {
       const el = document.getElementById('intro-' + id);
