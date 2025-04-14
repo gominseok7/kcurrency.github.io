@@ -71,18 +71,53 @@
   <section id="notice" style="background-color: #f6f6f6; padding: 30px 20px; border-radius: 8px;">
     <h2 style="color: #333333;">📢 공지사항</h2>
     <ul>
-      <li>📌 신규회원 신청은 카카오톡 채널 @대한화폐사연합회로 문의해주세요.</li>
+      <li> 신규회원 신청은 카카오톡 채널 @대한화폐사연합회로 문의해주세요.</li>
     </ul>
   </section>
 </main>
 
 <div id="intro" style="display:none; background-color: #fdf5e6; padding: 40px 20px; border-radius: 8px; max-width: 800px; margin: auto;">
   <h2 style="color: #4a3d1f;">협회 소개</h2>
-  <p>대한화폐사연합회는 대한민국 내 화폐 수집문화의 올바른 정착과 건전한 경매 시스템 확립을 위해 설립된 민간 비영리 단체입니다.</p>
-  <p>우리는 단순한 매매를 넘어서, 수집가 간의 신뢰 형성, 유물 가치의 보존과 존중, 그리고 유통의 투명성과 공정함을 최우선 가치로 삼고 있습니다. 우리 협회는 단순히 물건을 사고파는 경매를 넘어서, 한국 화폐문화에 대한 존엄성과 진정성을 지켜나가는 데 앞장서고 있습니다.</p>
-  <p>협회는 정기적인 화폐 경매 방송을 통해 진짜와 가짜가 명확히 구분되는 신뢰 기반의 거래 환경을 조성하며, 경매 교육과 감정 노하우 공유를 통해 시장 내 신뢰도를 높이는 역할을 수행하고 있습니다. 뿐만 아니라, 수익 일부를 사회적 약자를 위한 기부 활동으로 환원함으로써, 단순한 거래를 넘어 더 나은 사회를 만드는 데 기여하고 있습니다.</p>
-  <p>여러분의 참여는 단순한 소비를 넘어, 화폐의 역사와 가치를 잇고, 신뢰의 공동체를 만들어가는 여정에 함께하는 것입니다. 대한화폐사연합회는 앞으로도 투명하고 정직한 수집문화를 이끌어가겠습니다.</p>
+  <ul style="list-style: none; padding-left: 0; display: flex; gap: 15px; margin-bottom: 20px;">
+    <li><a href="#intro-about" onclick="showIntroTab('about')" style="text-decoration: underline; color: #4a3d1f;">협회 소개</a></li>
+    <li><a href="#intro-message" onclick="showIntroTab('message')" style="text-decoration: underline; color: #4a3d1f;">회장 인사말</a></li>
+    <li><a href="#intro-location" onclick="showIntroTab('location')" style="text-decoration: underline; color: #4a3d1f;">오시는 길</a></li>
+  </ul>
+
+  <div id="intro-about">
+    <p>대한화폐사연합회는 대한민국 내 화폐 수집문화의 올바른 정착과 건전한 경매 시스템 확립을 위해 설립된 민간 비영리 단체입니다.</p>
+    <p>우리는 단순한 매매를 넘어서, 수집가 간의 신뢰 형성, 유물 가치의 보존과 존중, 그리고 유통의 투명성과 공정함을 최우선 가치로 삼고 있습니다. 우리 협회는 단순히 물건을 사고파는 경매를 넘어서, 한국 화폐문화에 대한 존엄성과 진정성을 지켜나가는 데 앞장서고 있습니다.</p>
+    <p>협회는 정기적인 화폐 경매 방송을 통해 진짜와 가짜가 명확히 구분되는 신뢰 기반의 거래 환경을 조성하며, 경매 교육과 감정 노하우 공유를 통해 시장 내 신뢰도를 높이는 역할을 수행하고 있습니다. 뿐만 아니라, 수익 일부를 사회적 약자를 위한 기부 활동으로 환원함으로써, 단순한 거래를 넘어 더 나은 사회를 만드는 데 기여하고 있습니다.</p>
+    <p>여러분의 참여는 단순한 소비를 넘어, 화폐의 역사와 가치를 잇고, 신뢰의 공동체를 만들어가는 여정에 함께하는 것입니다. 대한화폐사연합회는 앞으로도 투명하고 정직한 수집문화를 이끌어가겠습니다.</p>
+  </div>
+
+  <div id="intro-message" style="display: none;">
+    <h3 style="color: #4a3d1f; font-size: 1.4rem; margin-top: 20px;">회장 인사말</h3>
+    <p>존경하는 수집가 여러분,</p>
+    <p>대한화폐사연합회 회장 고민석입니다.</p>
+    <p>저희 협회는 단순한 거래 단체가 아니라, 진짜를 구별하고, 가짜를 막고, 투명한 경매 질서를 만들어 가는 <strong>수집 문화의 방패이자 마중물</strong>이 되고자 설립되었습니다.</p>
+    <p>현실적으로 온라인 환경은 불투명하고, 때로는 악의적인 거래들이 존재합니다. 저는 수많은 민원과 고발, 소송 속에서도 굽히지 않고 ‘정도(正道)’를 고수해왔습니다. 바로 이 협회를 통해, 저와 같은 방향성을 가진 분들이 함께할 수 있기를 간절히 바랍니다.</p>
+    <p>제가 직접 법률을 배우고, 고소장을 쓰고, 시스템을 개발한 것도 모두 ‘회원 여러분이 안전한 환경에서 수집 활동을 이어가실 수 있도록 하려는 진심’이었습니다.</p>
+    <p>협회는 앞으로 더 많은 투명한 거래 플랫폼을 구축하고, 기부 사업을 통해 사회적 책임도 다할 것입니다. 함께 믿고 응원해주십시오.</p>
+    <p style="text-align: right; margin-top: 30px;">2025년 4월<br />대한화폐사연합회 회장 고민석 올림</p>
+  </div>
+
+  <div id="intro-location" style="display: none;">
+    <h3 style="color: #4a3d1f; font-size: 1.4rem; margin-top: 20px;">오시는 길</h3>
+    <p>📍 주소: 광주광역시 북구 임방울대로 1042번길 49</p>
+    <p>🚗 자가용: 전용 주차공간은 없으며, 인근 공영주차장 또는 도로변 주차를 이용해주세요.</p>
+    <p>🚉 대중교통: 광주 지하철 1호선 운암역 하차 후 도보 10분 거리</p>
+  </div>
 </div>
+
+<script>
+  const introTabs = ['about', 'message', 'location'];
+  function showIntroTab(tab) {
+    introTabs.forEach(id => {
+      document.getElementById('intro-' + id).style.display = id === tab ? 'block' : 'none';
+    });
+  }
+</script>
 
 <div id="business" style="display:none; background-color: #eef7f1; padding: 30px 20px; border-radius: 8px; max-width: 800px; margin: auto;">
   <h2 style="color: #2e4e3f;">협회 사업</h2>
