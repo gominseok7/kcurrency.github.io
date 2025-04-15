@@ -19,9 +19,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
     }
     header h1 {
       font-size: 2.2rem;
@@ -34,7 +31,6 @@
       font-size: 1.3rem;
       text-decoration: none;
       margin-left: 30px;
-      cursor: pointer;
     }
     footer {
       background-color: #f5f5f5;
@@ -43,6 +39,12 @@
       font-size: 0.9rem;
       color: #666;
     }
+  header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
     .badge {
       display: inline-block;
       background-color: #d4a85c;
@@ -53,6 +55,7 @@
       border-radius: 4px;
       margin-left: 10px;
     }
+
     .notice-banner {
       background-color: #fff8dc;
       color: #222;
@@ -62,29 +65,20 @@
       font-size: 1rem;
       border-bottom: 1px solid #e0d8c2;
     }
-    .section {
-      display: none;
-      max-width: 800px;
-      margin: auto;
-      padding: 30px 20px;
-      border-radius: 8px;
-    }
-    .active {
-      display: block !important;
-    }
-    .join-button {
-      display: flex;
-      justify-content: center;
-      margin: 30px 0;
-    }
-    .join-button a button {
-      padding: 14px 28px;
-      font-size: 16px;
-      background-color: #3B3B6D;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
+      @media screen and (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      header h1 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+      nav a {
+        display: block;
+        margin: 5px 0;
+        font-size: 1.1rem;
+      }
     }
   </style>
 </head>
@@ -93,79 +87,192 @@
   <header>
     <h1>대한화폐사연합회 <span class="badge">감정·기부 연계 협회</span></h1>
     <nav>
-      <a data-target="notice">공지사항</a>
-      <a data-target="intro">협회 소개</a>
-      <a data-target="business">협회 사업</a>
-      <a data-target="donation">기부 사업</a>
-      <a data-target="contact">문의</a>
+      <a href="#notice">공지사항</a>
+      <a href="#intro">협회 소개</a>
+      <a href="#business">협회 사업</a>
+      <a href="#donation">기부 사업</a>
+      <a href="#contact">문의</a>
     </nav>
   </header>
 
   <main>
-    <section id="notice" class="section active" style="background-color: #f6f6f6;">
-      <h2 style="color: #333333;">공지사항</h2>
-      <ul>
-        <li>신규회원 신청은 카카오톡 채널 @대한화폐사연합회로 문의해주세요.</li>
-        <li>최근 타 플랫폼에서의 허위감정 및 가짜 화폐 판매가 증가하고 있습니다. 거래 전 감정 확인을 꼭 진행해주시기 바랍니다.</li>
-        <li>회원 요청으로 감정 확인을 진행한 결과, 위조 화폐로 인한 환불 사례가 3천만 원 이상 발생하였습니다. 반드시 감정 의뢰 후 거래하세요.</li>
-        <li>대한화폐사연합회는 모든 거래를 감정사 확인 후 승인하는 시스템을 시범 운영 중입니다.</li>
-        <li>수집품의 가치, 희소성, 보존 상태는 전문가에 의해 정기적으로 감정됩니다. 감정 문의는 카카오톡 채널로 신청 가능합니다.</li>
-      </ul>
-    </section>
+  <section id="notice" style="background-color: #f6f6f6; padding: 30px 20px; border-radius: 8px;">
+  <h2 style="color: #333333;">공지사항</h2>
+  <ul>
+    <li>신규회원 신청은 카카오톡 채널 @대한화폐사연합회로 문의해주세요.</li>
+    <li>최근 타 플랫폼에서의 허위감정 및 가짜 화폐 판매가 증가하고 있습니다. 거래 전 감정 확인을 꼭 진행해주시기 바랍니다.</li>
+    <li>회원 요청으로 감정 확인을 진행한 결과, 위조 화폐로 인한 환불 사례가 3천만 원 이상 발생하였습니다. 반드시 감정 의뢰 후 거래하세요.</li>
+    <li>대한화폐사연합회는 모든 거래를 감정사 확인 후 승인하는 시스템을 시범 운영 중입니다.</li>
+    <li>수집품의 가치, 희소성, 보존 상태는 전문가에 의해 정기적으로 감정됩니다. 감정 문의는 카카오톡 채널로 신청 가능합니다.</li>
+  </ul>
+</section>
+</main>
 
-    <div class="join-button">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfaDcDmpZPG0Z8SWuJUjzfYx2dadR_ChoNTsrq3lxjDkpgS2w/viewform?usp=header" target="_blank">
-        <button>📥 회원가입 신청하기</button>
-      </a>
-    </div>
+<div id="intro" style="display:none; background-color: #fdf5e6; padding: 40px 20px; border-radius: 8px; max-width: 800px; margin: auto;">
+  <h2 style="color: #4a3d1f;">협회 소개</h2>
+  <ul style="list-style: none; padding-left: 0; display: flex; gap: 15px; margin-bottom: 20px;">
+    <li><a href="#intro-about" onclick="showIntroTab('about')" style="text-decoration: underline; color: #4a3d1f;">협회 소개</a></li>
+    <li><a href="#intro-message" onclick="showIntroTab('message')" style="text-decoration: underline; color: #4a3d1f;">회장 인사말</a></li>
+    <li><a href="#intro-location" onclick="showIntroTab('location')" style="text-decoration: underline; color: #4a3d1f;">오시는 길</a></li>
+  </ul>
 
-    <section id="intro" class="section" style="background-color: #fdf5e6;">
-      <h2 style="color: #4a3d1f;">협회 소개</h2>
-      <p>대한화폐사연합회는 대한민국 내 화폐 수집문화의 올바른 정착과 건전한 경매 시스템 확립을 위해 설립된 민간 비영리 단체입니다. 우리는 단순한 매매를 넘어서, 수집가 간의 신뢰 형성, 유물 가치의 보존과 존중, 그리고 유통의 투명성과 공정함을 최우선 가치로 삼고 있습니다.</p>
-      <p>협회는 정기적인 화폐 경매 방송을 통해 진짜와 가짜가 명확히 구분되는 신뢰 기반의 거래 환경을 조성하며, 경매 교육과 감정 노하우 공유를 통해 시장 내 신뢰도를 높이는 역할을 수행하고 있습니다. 뿐만 아니라, 수익 일부를 사회적 약자를 위한 기부 활동으로 환원함으로써, 단순한 거래를 넘어 더 나은 사회를 만드는 데 기여하고 있습니다.</p>
-      <p>여러분의 참여는 단순한 소비를 넘어, 화폐의 역사와 가치를 잇고, 신뢰의 공동체를 만들어가는 여정에 함께하는 것입니다. 대한화폐사연합회는 앞으로도 투명하고 정직한 수집문화를 이끌어가겠습니다.</p>
-    </section>
+  <div id="intro-about">
+    <p>대한화폐사연합회는 대한민국 내 화폐 수집문화의 올바른 정착과 건전한 경매 시스템 확립을 위해 설립된 민간 비영리 단체입니다.</p>
+    <p>우리는 단순한 매매를 넘어서, 수집가 간의 신뢰 형성, 유물 가치의 보존과 존중, 그리고 유통의 투명성과 공정함을 최우선 가치로 삼고 있습니다. 우리 협회는 단순히 물건을 사고파는 경매를 넘어서, 한국 화폐문화에 대한 존엄성과 진정성을 지켜나가는 데 앞장서고 있습니다.</p>
+    <p>협회는 정기적인 화폐 경매 방송을 통해 진짜와 가짜가 명확히 구분되는 신뢰 기반의 거래 환경을 조성하며, 경매 교육과 감정 노하우 공유를 통해 시장 내 신뢰도를 높이는 역할을 수행하고 있습니다. 뿐만 아니라, 수익 일부를 사회적 약자를 위한 기부 활동으로 환원함으로써, 단순한 거래를 넘어 더 나은 사회를 만드는 데 기여하고 있습니다.</p>
+    <p>여러분의 참여는 단순한 소비를 넘어, 화폐의 역사와 가치를 잇고, 신뢰의 공동체를 만들어가는 여정에 함께하는 것입니다. 대한화폐사연합회는 앞으로도 투명하고 정직한 수집문화를 이끌어가겠습니다.</p>
+  </div>
 
-    <section id="business" class="section" style="background-color: #eef7f1;">
-      <h2 style="color: #2e4e3f;">협회 사업</h2>
-      <p>협회는 정기 경매, 감정 교육, 회원 연계 활동, 기부금 정산 시스템 등 다양한 공익 활동을 운영하고 있습니다. 매주 온라인 경매 방송을 통해 투명하고 공정한 입찰 문화를 조성하며, 경매 진행자 교육 및 실시간 정산 시스템으로 시장 신뢰를 회복하고 있습니다.</p>
-      <p>또한, 중장기적으로는 오프라인 전시회, 세미나, 정기 간행물 발간을 통해 화폐 수집 문화의 가치를 널리 알리고 후속 세대 수집가를 육성할 계획입니다.</p>
-    </section>
+  <div id="intro-message" style="display: none;">
+    <h3 style="color: #4a3d1f; font-size: 1.4rem; margin-top: 20px;">회장 인사말</h3>
+    <p>존경하는 수집가 여러분,</p>
+    <p>대한화폐사연합회 회장 고민석입니다.</p>
+    <p>저희 협회는 단순한 거래 단체가 아니라, 진짜를 구별하고, 가짜를 막고, 투명한 경매 질서를 만들어 가는 <strong>수집 문화의 방패이자 마중물</strong>이 되고자 설립되었습니다.</p>
+    <p>현실적으로 온라인 환경은 불투명하고, 때로는 악의적인 거래들이 존재합니다. 저는 수많은 민원과 고발, 소송 속에서도 굽히지 않고 ‘정도(正道)’를 고수해왔습니다. 바로 이 협회를 통해, 저와 같은 방향성을 가진 분들이 함께할 수 있기를 간절히 바랍니다.</p>
+    <p>제가 직접 법률을 배우고, 고소장을 쓰고, 시스템을 개발한 것도 모두 ‘회원 여러분이 안전한 환경에서 수집 활동을 이어가실 수 있도록 하려는 진심’이었습니다.</p>
+    <p>협회는 앞으로 더 많은 투명한 거래 플랫폼을 구축하고, 기부 사업을 통해 사회적 책임도 다할 것입니다. 함께 믿고 응원해주십시오.</p>
+    <p style="text-align: right; margin-top: 30px;">2025년 4월<br />대한화폐사연합회 회장 고민석 올림</p>
+  </div>
 
-    <section id="donation" class="section" style="background-color: #fef4ea;">
-      <h2 style="color: #a3561b;">기부 사업</h2>
-      <p>대한화폐사연합회는 단순한 수익 중심이 아닌, 사회적 책임을 다하는 수집문화를 실현하고자 기부 사업을 함께 운영하고 있습니다. 모든 경매 낙찰 수익의 일부는 유기견 보호소, 미혼모 시설, 일시보호소 등 복지 사각지대에 놓인 이웃들에게 전달되며, 이를 통해 ‘수집이 곧 기부’가 될 수 있도록 하고 있습니다.</p>
-      <p>기부금은 분기별로 정산 및 보고되며, 홈페이지와 카카오톡 채널을 통해 모든 기부 내역을 투명하게 공개하고 있습니다. 보호소 방문 및 봉사활동 등 실질적인 참여도 함께 진행합니다.</p>
-    </section>
+  <div id="intro-location" style="display: none;">
+  <h3 style="color: #4a3d1f; font-size: 1.4rem; margin-top: 20px;">오시는 길</h3>
+  <p>📍 주소: 광주광역시 북구 임방울대로 1042번길 49</p>
+  <p>🚗 자가용: 전용 주차공간은 없으며, 인근 공영주차장 또는 도로변 주차를 이용해주세요.</p>
+  <p>🚉 대중교통: 광주 지하철 1호선 운암역 하차 후 도보 10분 거리</p>
+  <div style="margin-top: 20px;">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3275.064762822801!2d126.85483257627488!3d35.18309495842416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357189021ceccdb9%3A0x377f80f8229db47a!2z64yA7ZWZ6rWQIOyEnOyauOumrO2VnOqzteq1rCDsgqzslYjsoJXsnY0gMTA0Muq4uCA0OQ!5e0!3m2!1sko!2skr!4v1713080584025!5m2!1sko!2skr" width="100%" height="300" style="border:0; border-radius: 8px; box-shadow: 0 0 5px rgba(0,0,0,0.2);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</div>
+</div>
 
-    <section id="contact" class="section" style="background-color: #e9f0fb;">
-      <h2 style="color: #2b3a59;">문의 및 민원 접수</h2>
-      <p>대한화폐사연합회는 경매 참여자뿐만 아니라, 경매 시스템을 배우고 싶은 분들을 위한 문의도 받고 있습니다. 경매 진행 방식, 출품 절차, 실시간 정산 시스템의 구조 등 협회가 운영하는 경매 플랫폼에 대한 정보가 필요하신 분들은 언제든지 연락주시기 바랍니다.</p>
-      <p>또한, 협회 경매 시스템 도입을 원하는 개인 및 단체, 향후 경매인이 되고자 하시는 분들께는 별도의 신청 절차와 교육 커리큘럼 안내가 제공됩니다.</p>
-      <p>감정 의뢰, 기부 협력, 홍보 제안 등 다양한 형태의 민원 접수도 가능합니다.</p>
-      <ul>
-        <li>💬 카카오톡 채널: @대한화폐사연합회</li>
-      </ul>
-    </section>
-  </main>
-
-  <script>
-    document.querySelectorAll('nav a').forEach(link => {
-      link.addEventListener('click', e => {
-        const targetId = e.target.getAttribute('data-target');
-        document.querySelectorAll('.section').forEach(sec => {
-          sec.classList.remove('active');
+<script>
+  const sections = ['notice', 'intro', 'business', 'role', 'membership', 'grading', 'donation', 'contact'];
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', e => {
+      const targetId = link.getAttribute('href').replace('#', '');
+      if (sections.includes(targetId)) {
+        e.preventDefault();
+        sections.forEach(id => {
+          const section = document.getElementById(id);
+          if (section) {
+            section.style.display = id === targetId ? 'block' : 'none';
+          }
         });
-        const targetSection = document.getElementById(targetId);
-        if (targetSection) {
-          targetSection.classList.add('active');
-          window.scrollTo({ top: targetSection.offsetTop - 60, behavior: 'smooth' });
+        if (targetId === 'intro') {
+          showIntroTab('about');
         }
-      });
+      }
     });
-  </script>
+  });
 
-  <footer>
+  function showIntroTab(tab) {
+    document.getElementById('intro').style.display = 'block';
+    const tabs = ['about', 'message', 'location'];
+    tabs.forEach(id => {
+      const el = document.getElementById('intro-' + id);
+      if (el) {
+        el.style.display = id === tab ? 'block' : 'none';
+      }
+    });
+  }
+  function showBusinessTab(tab) {
+    const tabs = ['role', 'membership', 'grading'];
+    tabs.forEach(id => {
+      const section = document.getElementById(id);
+      if (section) {
+        section.style.display = id === tab ? 'block' : 'none';
+      }
+    });
+    document.getElementById('business').style.display = 'block';
+  }
+</script>
+
+<div id="business" style="display:none; background-color: #eef7f1; padding: 30px 20px; border-radius: 8px; max-width: 800px; margin: auto;">
+  <h2 style="color: #2e4e3f;">협회 사업</h2>
+  <ul style="list-style: none; padding-left: 0; display: flex; gap: 15px; margin-bottom: 20px;">
+    <li><a href="#role" onclick="showBusinessTab('role')" style="text-decoration: underline; color: #2e4e3f;">협회의 역할</a></li>
+    <li><a href="#membership" onclick="showBusinessTab('membership')" style="text-decoration: underline; color: #2e4e3f;">회원 운영 안내</a></li>
+    <li><a href="#grading" onclick="showBusinessTab('grading')" style="text-decoration: underline; color: #2e4e3f;">감정 기준 안내</a></li>
+  </ul>
+  <div id="business-role">
+    <p>대한화폐사연합회는 경매를 중심으로 활동하는 전문 경매인들을 육성하고 연결하는 사업을 운영하고 있습니다. 단순한 개인 판매를 넘어, 회원 간의 네트워크를 구축하고 신뢰 기반의 거래 구조를 시스템화함으로써 화폐 수집 시장의 신뢰 회복을 주도하고 있습니다.</p>
+    <p>협회는 매주 정기적인 온라인 경매 방송을 통해 투명하고 공정한 입찰 문화를 조성하고 있으며, 경매 진행자들의 교육, 감정 능력 향상 프로그램, 실시간 정산 시스템을 통해 시장 혼탁 요소를 줄이고 있습니다.</p>
+    <p>나아가, 중장기적으로는 오프라인 전시회, 세미나 개최 및 정기 간행물 발간 등을 통해 화폐 수집 문화의 가치를 널리 알리고, 후속 세대 수집가들을 위한 기반을 만들어갈 예정입니다.</p>
+  </div>
+</div>
+
+<!-- 협회의 역할 섹션 추가 -->
+<div id="role" style="display:none; background-color: #f1f1f9; padding: 30px 20px; border-radius: 8px; max-width: 800px; margin: auto;">
+  <h2 style="color: #3b3b6d;">협회의 역할</h2>
+  <p>대한화폐사연합회는 감정 신뢰 시스템 확립과 수집문화의 공공성과 책임성 강화에 중점을 둔 비영리 단체입니다.</p>
+  <p>화폐 감정 표준 제시, 가짜 유통 경로 신고 접수, 실명제 거래 캠페인 등 공익을 위한 활동을 수행합니다.</p>
+  <p>또한 기부금 기반의 소외계층 지원, 보호소 연계 활동 등 수집가들의 나눔 참여를 이끌어내며, 단순한 거래를 넘어선 공동체적 가치를 추구합니다.</p>
+</div>
+
+<!-- 회원 운영 안내 섹션 수정본 -->
+<div id="membership" style="display:none; background-color: #fdf9ef; padding: 30px 20px; border-radius: 8px; max-width: 800px; margin: auto;">
+  <h2 style="color: #6d4c1f;">회원 운영 안내</h2>
+  <ul>
+    <li>입회비 및 연회비 없음</li>
+    <li>정기 감정 교육 참여 가능</li>
+    <li>회원 경매·기부 연계 활동 참여 가능</li>
+    <li>정산/투명 공시 시스템 기반 운영</li>
+  </ul>
+  <div style="margin-top: 20px; padding: 20px; background-color: #fff7e6; border-radius: 8px; box-shadow: 0 0 6px rgba(0,0,0,0.1);">
+    <h3 style="color: #a85c00;">📥 회원가입 신청 안내</h3>
+    <p>대한화폐사연합회의 회원이 되어 수집 문화의 신뢰를 함께 만들어 가주세요.</p>
+    <p>가입은 간단한 구글폼 작성으로 신청 가능하며, 내부 심사 후 안내드립니다.</p>
+    <p style="margin-top: 10px; font-weight: bold;">
+      👉 <a href="https://docs.google.com/forms/d/e/1FAIpQLSfaDcDmpZPG0Z8SWuJUjzfYx2dadR_ChoNTsrq3lxjDkpgS2w/viewform?usp=header" 
+      target="_blank" 
+      style="color: #a85c00; text-decoration: underline;">
+      구글폼으로 회원가입 신청하기</a>
+    </p>
+    <p style="margin-top: 10px; font-size: 0.9rem; color: #555;">※ 수집가/판매자/기부 연계 참여자 모두 신청 가능</p>
+  </div>
+</div>
+
+<!-- 감정 기준 안내 섹션 추가 -->
+<div id="grading" style="display:none; background-color: #f3fbf4; padding: 30px 20px; border-radius: 8px; max-width: 800px; margin: auto;">
+  <h2 style="color: #2c5e3a;">감정 기준 안내</h2>
+  <p>대한화폐사연합회는 보존 상태, 유통 이력, 위조 여부, 시장 유동성 등을 기준으로 화폐 감정 평가를 수행합니다.</p>
+  <p>감정은 협회 소속 전문가 또는 인증된 외부 감정사의 확인을 기반으로 이루어지며, 결과에 따라 거래 및 기부 여부가 결정됩니다.</p>
+</div>
+
+<div id="donation" style="display:none; background-color: #fef4ea; padding: 30px 20px; border-radius: 8px; max-width: 800px; margin: auto;">
+  <h2 style="color: #a3561b;">기부 사업</h2>
+  <p>대한화폐사연합회는 단순한 수익 중심이 아닌, 사회적 책임을 다하는 수집문화를 실현하고자 기부 사업을 함께 운영하고 있습니다.</p>
+  <p>모든 경매 낙찰 수익의 일부는 유기견 보호소, 미혼모 시설, 일시보호소 등 복지 사각지대에 놓인 이웃들에게 전달되며, 이를 통해 ‘수집이 곧 기부’가 될 수 있도록 하고 있습니다.</p>
+  <p>기부금은 분기별로 정산 및 보고되며, 홈페이지와 카카오톡 채널을 통해 모든 기부 내역을 투명하게 공개하고 있습니다. 단순한 기부금 전달에 그치지 않고, 보호소 방문 및 직접 봉사활동 등 실질적인 참여도 함께 진행합니다.</p>
+  <p>경매 참여만으로도 선한 영향력에 동참하실 수 있습니다. 여러분의 입찰은 누군가에게는 생명을 지키는 따뜻한 응원이 됩니다.</p>
+</div>
+
+<div id="contact" style="display:none; background-color: #e9f0fb; padding: 30px 20px; border-radius: 8px; max-width: 800px; margin: auto;">
+  <h2 style="color: #2b3a59;">문의 및 민원 접수</h2>
+  <p>대한화폐사연합회는 경매 참여자뿐만 아니라, 경매 시스템을 배우고 싶은 분들을 위한 문의도 받고 있습니다.</p>
+  <p>경매 진행 방식, 출품 절차, 실시간 정산 시스템의 구조 등 협회가 운영하는 경매 플랫폼에 대한 정보가 필요하신 분들은 언제든지 연락주시기 바랍니다.</p>
+  <p>또한, 협회 경매 시스템 도입을 원하는 개인 및 단체, 향후 경매인이 되고자 하시는 분들께는 별도의 신청 절차와 교육 커리큘럼 안내가 제공됩니다. 비용 관련 사항이나 입문 과정을 알고 싶으신 분들도 부담 없이 문의해주세요.</p>
+  <p>경매 외에도 감정 의뢰, 기부 협력, 홍보 제안 등 다양한 형태의 민원 접수가 가능합니다.</p>
+  <ul>
+    <li>💬 카카오톡 채널: @대한화폐사연합회</li>
+  </ul>
+</div>
+
+<script>
+  const sections = ['notice', 'intro', 'business', 'role', 'membership', 'grading', 'donation', 'contact'];
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', e => {
+      const targetId = link.getAttribute('href').replace('#', '');
+      if (sections.includes(targetId)) {
+        e.preventDefault();
+        sections.forEach(id => {
+          document.getElementById(id).style.display = id === targetId ? 'block' : 'none';
+        });
+      }
+    });
+  });
+</script>
+<footer>
     <p>대표자: 고민석 | 사업자등록번호: 101-82-89774 | 주소: 광주광역시 북구 임방울대로 1042번길 49<br />
     ⓒ 2025 대한화폐사연합회. All rights reserved.</p>
   </footer>
