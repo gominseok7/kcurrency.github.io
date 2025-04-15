@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://www.화폐사연합회.com/sitemap.xml
+Sitemap: https://www.xn--vf4bi0ho5n2qbq7azj.com/sitemap.xml
