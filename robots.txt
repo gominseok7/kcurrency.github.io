@@ -1,4 +1,4 @@
 User-agent: *
-Allow: /
+Disallow:
 
-Sitemap: https://gominseok7.github.io/kcurrency.github.io/sitemap.xml
+Sitemap: https://www.화폐사연합회.com/sitemap.xml
